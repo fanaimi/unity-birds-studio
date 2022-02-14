@@ -9,7 +9,8 @@ public class Bird : MonoBehaviour
     private SpriteRenderer m_spriteRend;
     private Vector2 m_startPos;
 
-    [SerializeField] private float m_speed = 700f;
+    [SerializeField] private float m_speed = 1000f;
+    [SerializeField] private float m_maxDrag = 3.5f;
 
 
     private void Awake()
@@ -48,7 +49,28 @@ public class Bird : MonoBehaviour
     private void OnMouseDrag()
     {
         Vector3 m_mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(m_mousePos.x, m_mousePos.y, transform.position.z);
+
+        Vector2 m_desiredPos = m_mousePos;
+     
+        // transform.position = new Vector3(m_mousePos.x, m_mousePos.y, transform.position.z);
+
+        float m_distance = Vector2.Distance(m_desiredPos, m_startPos);
+        if (m_distance > m_maxDrag)
+        {
+            Vector2 direction = m_desiredPos - m_startPos;
+            direction.Normalize();
+
+            m_desiredPos = m_startPos + (direction * m_maxDrag);
+        }
+
+        // this is to prevent the bird to be dragged to the right
+        if (m_desiredPos.x > m_startPos.x)
+        {
+            m_desiredPos.x = m_startPos.x;
+        }
+
+        m_rb.position = m_desiredPos;
+
     } // OnMouseDrag
     
     

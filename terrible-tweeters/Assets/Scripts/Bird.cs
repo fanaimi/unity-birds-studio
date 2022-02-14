@@ -9,7 +9,7 @@ public class Bird : MonoBehaviour
     private SpriteRenderer m_spriteRend;
     private Vector2 m_startPos;
 
-    [SerializeField] private float m_speed = 500f;
+    [SerializeField] private float m_speed = 700f;
 
 
     private void Awake()
@@ -57,5 +57,23 @@ public class Bird : MonoBehaviour
     {
         
     } // Update
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        StartCoroutine(ResetBird());
+    } // OnCollisionEnter2D
+
+
+
+    private IEnumerator ResetBird()
+    {
+        yield return new WaitForSeconds(3);
+        m_rb.isKinematic = true;
+        m_rb.velocity = Vector2.zero;
+        m_rb.position = m_startPos  ; // vector2
+    }
+
+
 
 }

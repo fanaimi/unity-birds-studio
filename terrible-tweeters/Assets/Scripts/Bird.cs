@@ -7,6 +7,10 @@ public class Bird : MonoBehaviour
 {
     private Rigidbody2D m_rb;
     private SpriteRenderer m_spriteRend;
+    private Vector2 m_startPos;
+
+    [SerializeField] private float m_speed = 500f;
+
 
     private void Awake()
     {
@@ -18,6 +22,7 @@ public class Bird : MonoBehaviour
     void Start()
     {
         m_rb.isKinematic = true;
+        m_startPos = m_rb.position; // vector2
     }
 
 
@@ -32,11 +37,18 @@ public class Bird : MonoBehaviour
     {
         // Debug.Log("mouse up");
         m_spriteRend.color = Color.white;
+        Vector2 m_currentPos = m_rb.position;
+
+        Vector2 m_direction = m_startPos - m_currentPos;
+        m_direction.Normalize();
+        m_rb.isKinematic = false;
+        m_rb.AddForce(m_direction * m_speed);
     } // OnMouseUp
     
     private void OnMouseDrag()
     {
-        
+        Vector3 m_mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = new Vector3(m_mousePos.x, m_mousePos.y, transform.position.z);
     } // OnMouseDrag
     
     

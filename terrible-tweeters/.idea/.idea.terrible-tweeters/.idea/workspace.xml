@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3a51ace-f61c-450c-bae6-e8510b377106" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TerribleTweeters.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TerribleTweeters.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bird.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bird.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644861935979</updated>
-      <workItem from="1644862003053" duration="1539000" />
+      <workItem from="1644862003053" duration="3010000" />
     </task>
     <servers />
   </component>

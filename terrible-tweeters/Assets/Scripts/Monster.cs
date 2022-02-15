@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+    [SerializeField] private Sprite m_deadSprite;
+    
     
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,7 +43,8 @@ public class Monster : MonoBehaviour
 
     private void Die()
     {
-        gameObject.SetActive(false);
+        GetComponent<SpriteRenderer>().sprite = m_deadSprite;
+        // gameObject.SetActive(false);
     }
 
 }

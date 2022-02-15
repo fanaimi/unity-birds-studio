@@ -10,7 +10,7 @@ public class Bird : MonoBehaviour
     private Vector2 m_startPos;
 
     [SerializeField] private float m_speed = 1000f;
-    [SerializeField] private float m_maxDrag = 3.5f;
+    [SerializeField] private float m_maxDragDistance = 3.5f;
 
 
     private void Awake()
@@ -54,13 +54,16 @@ public class Bird : MonoBehaviour
      
         // transform.position = new Vector3(m_mousePos.x, m_mousePos.y, transform.position.z);
 
+        
+        // this is to make sure the player is not dragged too much at the beginning
         float m_distance = Vector2.Distance(m_desiredPos, m_startPos);
-        if (m_distance > m_maxDrag)
+        if (m_distance > m_maxDragDistance)
         {
             Vector2 direction = m_desiredPos - m_startPos;
             direction.Normalize();
 
-            m_desiredPos = m_startPos + (direction * m_maxDrag);
+            // setting a point on the direction at a certain distance
+            m_desiredPos = m_startPos + (direction * m_maxDragDistance);
         }
 
         // this is to prevent the bird to be dragged to the right

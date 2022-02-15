@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e3a51ace-f61c-450c-bae6-e8510b377106" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TerribleTweeters.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TerribleTweeters.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1644861935979</updated>
       <workItem from="1644862003053" duration="9047000" />
-      <workItem from="1644918859756" duration="2018000" />
+      <workItem from="1644918859756" duration="2539000" />
     </task>
     <servers />
   </component>

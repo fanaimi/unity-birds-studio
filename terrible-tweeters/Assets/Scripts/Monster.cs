@@ -7,7 +7,8 @@ public class Monster : MonoBehaviour
 {
     [SerializeField] private Sprite m_deadSprite;
     [SerializeField] private ParticleSystem m_monsterDeathParticleSystem;
-    
+
+    private bool m_hasDied;
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -21,6 +22,9 @@ public class Monster : MonoBehaviour
 
     private bool ShouldDieFromCollision(Collision2D collision)
     {
+        // don't die multiple times
+        if (m_hasDied) return false;
+        
         Bird bird = collision.gameObject.GetComponent<Bird>();
         if (bird != null)
         {
@@ -43,6 +47,7 @@ public class Monster : MonoBehaviour
 
     private void Die()
     {
+        m_hasDied = true;
         GetComponent<SpriteRenderer>().sprite = m_deadSprite;
         m_monsterDeathParticleSystem.Play();
         // gameObject.SetActive(false);

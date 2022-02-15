@@ -55,3 +55,11 @@
 
     } // OnMouseDrag
 ```
+
+
+### PARTICLE SYSTEM SIMULATION SPACE:
+* LOCAL     => the system will follow the game object they are attached to, rotate and move with it
+                eg: flames on a flaming sword
+* GLOBAL    => the system will ignore and not follow its game object
+                eg: shells after an explosion
+* CUSTOM    => anything customised to be different

@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// makes sure we select this and not any of its childrem
+[SelectionBase]
 public class Monster : MonoBehaviour
 {
     [SerializeField] private Sprite m_deadSprite;

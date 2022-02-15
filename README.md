@@ -63,3 +63,16 @@
 * GLOBAL    => the system will ignore and not follow its game object
                 eg: shells after an explosion
 * CUSTOM    => anything customised to be different
+
+
+### SELECTION-BASE attribute
+* we use [SelectionBase] attribute for the whole class so that we can select this object and not its children 
+    (eg not its particle system)
+
+```c#  
+    [SelectionBase]
+    public class Monster : MonoBehaviour
+    {
+        // class here
+    }    
+```

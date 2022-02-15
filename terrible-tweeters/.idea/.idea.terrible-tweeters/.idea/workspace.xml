@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3a51ace-f61c-450c-bae6-e8510b377106" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Monster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Monster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1644861935979</updated>
       <workItem from="1644862003053" duration="9047000" />
-      <workItem from="1644918859756" duration="3091000" />
+      <workItem from="1644918859756" duration="6863000" />
     </task>
     <servers />
   </component>

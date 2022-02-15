@@ -17,7 +17,7 @@ public class Monster : MonoBehaviour
 
         if (ShouldDieFromCollision(collision))
         {
-            Die();
+            StartCoroutine( Die() );
         }
 
     }
@@ -47,12 +47,13 @@ public class Monster : MonoBehaviour
     } // ShouldDieFromCollision
 
 
-    private void Die()
+    private IEnumerator Die()
     {
         m_hasDied = true;
         GetComponent<SpriteRenderer>().sprite = m_deadSprite;
         m_monsterDeathParticleSystem.Play();
-        // gameObject.SetActive(false);
+        yield return new WaitForSeconds(1);
+        gameObject.SetActive(false);
     }
 
 }

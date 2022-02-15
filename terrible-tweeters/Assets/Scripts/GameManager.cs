@@ -42,10 +42,8 @@ public class GameManager : MonoBehaviour
     {
         if (MonstersAreAllDead())
         {
-            // DO NOT FORGET TO ADD SCENES FOR ALL OUR LEVELS TO FILE > BUILD SETTINGS
-            SceneManager.LoadScene(m_nextLevelName);
             Debug.Log($"Go to level {m_nextLevelName}");
-            // GoToNextLevel();
+            GoToNextLevel();
         }
     } // Update
     
@@ -65,7 +63,8 @@ public class GameManager : MonoBehaviour
     
     private void GoToNextLevel()
     {
-        
+        // DO NOT FORGET TO ADD SCENES FOR ALL OUR LEVELS TO FILE > BUILD SETTINGS
+        SceneManager.LoadScene(m_nextLevelName);
     } // GoToNextLevel
 
 }

@@ -11,6 +11,7 @@ public class Bird : MonoBehaviour
 
     [SerializeField] private float m_speed = 1000f;
     [SerializeField] private float m_maxDragDistance = 3.5f;
+    private float m_birdRespawnDelay = 2f;
 
 
     private void Awake()
@@ -93,7 +94,7 @@ public class Bird : MonoBehaviour
 
     private IEnumerator ResetBird()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(m_birdRespawnDelay);
         m_rb.isKinematic = true;
         m_rb.velocity = Vector2.zero;
         m_rb.position = m_startPos  ; // vector2

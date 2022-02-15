@@ -76,3 +76,17 @@
         // class here
     }    
 ```
+
+### CINEMACHINE
+* camera controller for unity
+* window > package manager > cinemachine => install
+* cinemachine > create 2d camera
+* create a new EMPTY game object 
+    * rename it as TARGET-GROUP
+    * add component "cinemachine target group"
+    * under target gtoup component, add a new Target clicking on (+)
+    * drag player to follow in the target field
+    * drag enemies too
+    * set RADIUS around targets 
+* back in Cinemachine Virtual Camera
+    * drag TargetGroup game object under CM VCAM => follow    

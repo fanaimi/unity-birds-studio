@@ -7,7 +7,7 @@
 ```
 
 ### working with normals to detect which direction a game object has been hit from
-```
+```c#
 	private void OnCollisionEnter2D(Collision2D collision)
     {
 		// if something falls on the game object from above
@@ -25,7 +25,7 @@
 
 
 ### on mouse drag to launch the player
-```
+```c#
  private void OnMouseDrag()
     {
 		// getting current mouse position

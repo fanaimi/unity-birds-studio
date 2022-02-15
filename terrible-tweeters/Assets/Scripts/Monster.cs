@@ -6,7 +6,7 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     [SerializeField] private Sprite m_deadSprite;
-    
+    [SerializeField] private ParticleSystem m_monsterDeathParticleSystem;
     
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -44,6 +44,7 @@ public class Monster : MonoBehaviour
     private void Die()
     {
         GetComponent<SpriteRenderer>().sprite = m_deadSprite;
+        m_monsterDeathParticleSystem.Play();
         // gameObject.SetActive(false);
     }
 

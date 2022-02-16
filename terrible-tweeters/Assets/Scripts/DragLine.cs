@@ -14,11 +14,25 @@ public class DragLine : MonoBehaviour
     {
         m_LineRend = GetComponent<LineRenderer>();
         m_Bird = FindObjectOfType<Bird>();
+        Vector3 lineStartPos = new Vector3(
+            m_Bird.transform.position.x,
+            m_Bird.transform.position.y,
+            -.1f
+        );
+        m_LineRend.SetPosition(0, lineStartPos);
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_LineRend.SetPosition(1, m_Bird.transform.position);
+        if (m_Bird.m_IsDragging)
+        {
+            m_LineRend.enabled = true;
+            m_LineRend.SetPosition(1, m_Bird.transform.position);
+        }
+        else
+        {
+            m_LineRend.enabled = false;
+        }
     }
 }

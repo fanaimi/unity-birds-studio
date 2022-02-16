@@ -51,6 +51,7 @@ public class Bird : MonoBehaviour
         m_direction.Normalize();
         m_rb.isKinematic = false;
         m_rb.AddForce(m_direction * m_speed);
+        m_IsDragging = false;
     } // OnMouseUp
     
     private void OnMouseDrag()

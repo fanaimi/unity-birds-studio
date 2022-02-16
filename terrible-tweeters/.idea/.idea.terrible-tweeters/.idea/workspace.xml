@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e3a51ace-f61c-450c-bae6-e8510b377106" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bird.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bird.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DragLine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DragLine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera Setup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera Setup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +66,7 @@
       <updated>1644861935979</updated>
       <workItem from="1644862003053" duration="9047000" />
       <workItem from="1644918859756" duration="11328000" />
-      <workItem from="1645003901344" duration="3738000" />
+      <workItem from="1645003901344" duration="4992000" />
     </task>
     <servers />
   </component>

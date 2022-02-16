@@ -90,3 +90,13 @@
     * set RADIUS around targets 
 * back in Cinemachine Virtual Camera
     * drag TargetGroup game object under CM VCAM => follow    
+
+
+
+
+ ### creating public properties (eg bool flags) that can only be modified internally
+ ```c#
+    // public property than can only be modified internally
+    public bool m_IsDragging { get; private set; }
+
+ ```   

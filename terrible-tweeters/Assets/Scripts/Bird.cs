@@ -12,6 +12,11 @@ public class Bird : MonoBehaviour
     [SerializeField] private float m_speed = 1000f;
     [SerializeField] private float m_maxDragDistance = 3.5f;
     private float m_birdRespawnDelay = 2f;
+    
+    // public property than can only be modified internally
+    public bool m_IsDragging { get; private set; }
+    
+    
 
 
     private void Awake()
@@ -32,7 +37,8 @@ public class Bird : MonoBehaviour
     {
         // Debug.Log("mouse down");
         m_spriteRend.color = Color.red;
-    } // OnMouseDown
+        m_IsDragging = true;
+    }  // OnMouseDown
     
     
     private void OnMouseUp()

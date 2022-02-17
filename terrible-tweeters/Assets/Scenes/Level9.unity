@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2516538692661110853, guid: 34b6a8cdf72657740a0456518c3e534d, type: 3}
       propertyPath: m_Name
-      value: Red Bird
+      value: Nuat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34b6a8cdf72657740a0456518c3e534d, type: 3}
@@ -1895,7 +1895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 233377221847636413, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1088247
+      value: 4.108825
       objectReference: {fileID: 0}
     - target: {fileID: 233377221847636413, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1907,7 +1907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 233377221962860447, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1088247
+      value: 4.108825
       objectReference: {fileID: 0}
     - target: {fileID: 233377221962860447, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: m_LocalPosition.z

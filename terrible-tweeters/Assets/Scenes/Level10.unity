@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2516538692661110853, guid: 34b6a8cdf72657740a0456518c3e534d, type: 3}
       propertyPath: m_Name
-      value: Red Bird
+      value: Nuat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34b6a8cdf72657740a0456518c3e534d, type: 3}

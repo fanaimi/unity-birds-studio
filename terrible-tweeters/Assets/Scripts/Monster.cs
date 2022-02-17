@@ -27,8 +27,8 @@ public class Monster : MonoBehaviour
         // don't die multiple times
         if (m_hasDied) return false;
         
-        Bird bird = collision.gameObject.GetComponent<Bird>();
-        if (bird != null)
+        Nuat nuat = collision.gameObject.GetComponent<Nuat>();
+        if (nuat != null)
         {
             return true;
         }

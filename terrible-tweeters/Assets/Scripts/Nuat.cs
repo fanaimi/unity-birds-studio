@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bird : MonoBehaviour
+public class Nuat : MonoBehaviour
 {
     private Rigidbody2D m_rb;
     private SpriteRenderer m_spriteRend;
@@ -11,7 +11,7 @@ public class Bird : MonoBehaviour
 
     [SerializeField] private float m_speed = 1000f;
     [SerializeField] private float m_maxDragDistance = 3.5f;
-    private float m_birdRespawnDelay = 2f;
+    private float m_NuatRespawnDelay = 2f;
     
     // public property than can only be modified internally
     public bool m_IsDragging { get; private set; }
@@ -74,7 +74,7 @@ public class Bird : MonoBehaviour
             m_desiredPos = m_startPos + (direction * m_maxDragDistance);
         }
 
-        // this is to prevent the bird to be dragged to the right
+        // this is to prevent the Nuat to be dragged to the right
         if (m_desiredPos.x > m_startPos.x)
         {
             m_desiredPos.x = m_startPos.x;
@@ -118,7 +118,7 @@ public class Bird : MonoBehaviour
                 m_desiredPos = m_startPos + (direction * m_maxDragDistance);
             }
 
-            // this is to prevent the bird to be dragged to the right
+            // this is to prevent the Nuat to be dragged to the right
             if (m_desiredPos.x > m_startPos.x)
             {
                 m_desiredPos.x = m_startPos.x;
@@ -144,14 +144,14 @@ public class Bird : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(ResetBird());
+        StartCoroutine(ResetNuat());
     } // OnCollisionEnter2D
 
 
 
-    private IEnumerator ResetBird()
+    private IEnumerator ResetNuat()
     {
-        yield return new WaitForSeconds(m_birdRespawnDelay);
+        yield return new WaitForSeconds(m_NuatRespawnDelay);
         m_rb.isKinematic = true;
         m_rb.velocity = Vector2.zero;
         m_rb.position = m_startPos  ; // vector2

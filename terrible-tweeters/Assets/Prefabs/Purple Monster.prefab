@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 651242303060590042}
   - component: {fileID: 651242303060590020}
   - component: {fileID: 651242303060590021}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MonsterDeathParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4875,7 +4875,7 @@ GameObject:
   - component: {fileID: 651242303645615795}
   - component: {fileID: 651242303645615792}
   - component: {fileID: 651242303645615793}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Purple Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}

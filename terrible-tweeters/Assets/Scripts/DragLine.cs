@@ -6,17 +6,17 @@ public class DragLine : MonoBehaviour
 {
 
     private LineRenderer m_LineRend;
-    private Bird m_Bird;
+    private Nuat m_Nuat;
 
 
     // Start is called before the first frame update
     void Start()
     {
         m_LineRend = GetComponent<LineRenderer>();
-        m_Bird = FindObjectOfType<Bird>();
+        m_Nuat = FindObjectOfType<Nuat>();
         Vector3 lineStartPos = new Vector3(
-            m_Bird.transform.position.x,
-            m_Bird.transform.position.y,
+            m_Nuat.transform.position.x,
+            m_Nuat.transform.position.y,
             -.1f
         );
         m_LineRend.SetPosition(0, lineStartPos);
@@ -25,10 +25,10 @@ public class DragLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_Bird.m_IsDragging)
+        if (m_Nuat.m_IsDragging)
         {
             m_LineRend.enabled = true;
-            m_LineRend.SetPosition(1, m_Bird.transform.position);
+            m_LineRend.SetPosition(1, m_Nuat.transform.position);
         }
         else
         {

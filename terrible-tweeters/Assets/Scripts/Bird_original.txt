@@ -32,7 +32,7 @@ public class Bird : MonoBehaviour
         m_startPos = m_rb.position; // vector2
     }
 
-/*
+
     private void OnMouseDown()
     {
         // Debug.Log("mouse down");
@@ -83,62 +83,12 @@ public class Bird : MonoBehaviour
         m_rb.position = m_desiredPos;
 
     } // OnMouseDrag
-*/    
+    
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount != 1)
-            return;
-        var touch = Input.GetTouch(0);
-
-        if (touch.phase == TouchPhase.Began)
-        {
-            // Debug.Log("mouse down");
-            m_spriteRend.color = Color.red;
-            m_IsDragging = true;
-        }
-        else if (touch.phase == TouchPhase.Moved)
-        {
-            Vector3 m_mousePos = Camera.main.ScreenToWorldPoint(touch.position);
-
-            Vector2 m_desiredPos = m_mousePos;
-     
-            // transform.position = new Vector3(m_mousePos.x, m_mousePos.y, transform.position.z);
-
         
-            // this is to make sure the player is not dragged too much at the beginning
-            float m_distance = Vector2.Distance(m_desiredPos, m_startPos);
-            if (m_distance > m_maxDragDistance)
-            {
-                Vector2 direction = m_desiredPos - m_startPos;
-                direction.Normalize();
-
-                // setting a point on the direction at a certain distance
-                m_desiredPos = m_startPos + (direction * m_maxDragDistance);
-            }
-
-            // this is to prevent the bird to be dragged to the right
-            if (m_desiredPos.x > m_startPos.x)
-            {
-                m_desiredPos.x = m_startPos.x;
-            }
-
-            m_rb.position = m_desiredPos;
-        }
-        else if (touch.phase == TouchPhase.Ended)
-        {
-            // Debug.Log("mouse up");
-            m_spriteRend.color = Color.white;
-            Vector2 m_currentPos = m_rb.position;
-
-            Vector2 m_direction = m_startPos - m_currentPos;
-            m_direction.Normalize();
-            m_rb.isKinematic = false;
-            m_rb.AddForce(m_direction * m_speed);
-            m_IsDragging = false;
-        }
-
     } // Update
 
 

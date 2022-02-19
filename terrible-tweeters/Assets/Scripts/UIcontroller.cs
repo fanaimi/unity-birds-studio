@@ -12,12 +12,7 @@ public class UIcontroller : MonoBehaviour
     
     private Button m_RestartButton;
     
-    /*private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }*/
-
-    private void OnEnable()
+    private void Awake()
     {
         Debug.Log("enabled");
         SetUpButtons();

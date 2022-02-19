@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e3a51ace-f61c-450c-bae6-e8510b377106" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BG.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BG.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIcontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIcontroller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +68,7 @@
       <workItem from="1644918859756" duration="11328000" />
       <workItem from="1645003901344" duration="5238000" />
       <workItem from="1645092471180" duration="6129000" />
-      <workItem from="1645295381390" duration="592000" />
+      <workItem from="1645295381390" duration="3814000" />
     </task>
     <servers />
   </component>

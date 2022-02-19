@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("awakening");
+        // Debug.Log("awakening");
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("enabled");
+        // Debug.Log("enabled");
         m_monsters = FindObjectsOfType<Monster>();
     }
 

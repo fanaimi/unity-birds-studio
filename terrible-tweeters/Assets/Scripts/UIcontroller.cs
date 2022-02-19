@@ -1,18 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIcontroller : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    
+    
+    private Button m_RestartButton;
+    
+    /*private void Awake()
     {
-        
+        DontDestroyOnLoad(gameObject);
+    }*/
+
+    private void OnEnable()
+    {
+        Debug.Log("enabled");
+        SetUpButtons();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SetUpButtons()
     {
-        
+        Debug.Log("setting up buttons");
+        m_RestartButton = UiButtons.Instance.restartButton;
+        m_RestartButton.onClick.AddListener(RestartLevel);
+    }
+
+    public void RestartLevel()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        Debug.Log($"restarting {scene.name}");
+        SceneManager.LoadScene(scene.name);
     }
 }

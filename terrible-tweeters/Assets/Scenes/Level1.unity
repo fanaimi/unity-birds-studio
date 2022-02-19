@@ -751,6 +751,7 @@ GameObject:
   - component: {fileID: 1742399425}
   - component: {fileID: 1742399424}
   - component: {fileID: 1742399423}
+  - component: {fileID: 1742399427}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -838,6 +839,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1742399427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742399422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374f47d6e76e4294189d2e5999e2b44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1773619080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 651242303645615805, guid: abe744ec310ca6d429d9e21e9ca3f607, type: 3}
@@ -1361,31 +1374,31 @@ PrefabInstance:
       objectReference: {fileID: 1773619080}
     - target: {fileID: 233377221847636290, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: orthographic size
-      value: 6.6790347
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 233377221847636413, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3146284
+      value: -2.7226484
       objectReference: {fileID: 0}
     - target: {fileID: 233377221847636413, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8625334
+      value: 0.6179138
       objectReference: {fileID: 0}
     - target: {fileID: 233377221847636413, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.271122
+      value: 19.271122
       objectReference: {fileID: 0}
     - target: {fileID: 233377221962860447, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3146284
+      value: -2.7226484
       objectReference: {fileID: 0}
     - target: {fileID: 233377221962860447, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8625334
+      value: 0.6179138
       objectReference: {fileID: 0}
     - target: {fileID: 233377221962860447, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.271122
+      value: 19.271122
       objectReference: {fileID: 0}
     - target: {fileID: 1939271725542960124, guid: 4cc77bfc89d23f348bed0d878312cb3e, type: 3}
       propertyPath: m_RootOrder

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public Monster[] m_monsters;
     public static GameManager Instance { get { return _instance; } }
+    public int m_CurrentlLives;
 
 
     private void Awake()
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         // Debug.Log("enabled");
         m_monsters = FindObjectsOfType<Monster>();
+        UpdateLives(3);
     }
 
     // Update is called once per frame
@@ -66,5 +68,16 @@ public class GameManager : MonoBehaviour
         // DO NOT FORGET TO ADD SCENES FOR ALL OUR LEVELS TO FILE > BUILD SETTINGS
         SceneManager.LoadScene(m_nextLevelName);
     } // GoToNextLevel
+
+    public void UpdateLives(int numOfLives)
+    {
+        m_CurrentlLives = numOfLives;
+    }
+    
+    public void DecreaseLives()
+    {
+        m_CurrentlLives -=1;
+        Debug.Log($"lives left: {m_CurrentlLives}");
+    }
 
 }

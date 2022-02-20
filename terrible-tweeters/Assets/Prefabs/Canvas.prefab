@@ -502,6 +502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1703782881}
+  - component: {fileID: 1878124965}
   m_Layer: 5
   m_Name: LivesHolder
   m_TagString: Untagged
@@ -531,6 +532,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0.859375, y: 0}
   m_SizeDelta: {x: -1.7188, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1878124965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703782880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9604d1e932dbaba498a9804631186082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LifeIcons:
+  - {fileID: 1231569326}
+  - {fileID: 524532963}
+  - {fileID: 408845964}
 --- !u!1 &1819450697
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,10 +887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374f47d6e76e4294189d2e5999e2b44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lives:
-  - {fileID: 1231569326}
-  - {fileID: 524532963}
-  - {fileID: 408845964}
 --- !u!1 &4679125536170791517
 GameObject:
   m_ObjectHideFlags: 0

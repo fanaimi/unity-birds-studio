@@ -72,12 +72,13 @@ public class GameManager : MonoBehaviour
     public void UpdateLives(int numOfLives)
     {
         m_CurrentlLives = numOfLives;
+        UIcontroller.Instance.ShowLivesLeft(m_CurrentlLives);
     }
     
     public void DecreaseLives()
     {
         m_CurrentlLives -=1;
-        Debug.Log($"lives left: {m_CurrentlLives}");
+        UIcontroller.Instance.ShowLivesLeft(m_CurrentlLives);
     }
 
 }

@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &458441889 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 524532963, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-  m_PrefabInstance: {fileID: 4679125536731371032}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &473768901
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,16 +254,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &890640127 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 408845964, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-  m_PrefabInstance: {fileID: 4679125536731371032}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &926466612 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1231569326, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-  m_PrefabInstance: {fileID: 4679125536731371032}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &975099949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,30 +1450,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 408845964, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-      propertyPath: m_Name
-      value: Life
-      objectReference: {fileID: 0}
-    - target: {fileID: 408845964, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 524532963, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-      propertyPath: m_Name
-      value: Life
-      objectReference: {fileID: 0}
-    - target: {fileID: 524532963, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1231569326, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-      propertyPath: m_Name
-      value: Life
-      objectReference: {fileID: 0}
-    - target: {fileID: 1231569326, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4679125535107838374, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1577,21 +1538,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4679125535107838427, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-      propertyPath: Lives.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4679125535107838427, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-      propertyPath: Lives.Array.data[0]
-      value: 
-      objectReference: {fileID: 926466612}
-    - target: {fileID: 4679125535107838427, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-      propertyPath: Lives.Array.data[1]
-      value: 
-      objectReference: {fileID: 458441889}
-    - target: {fileID: 4679125535107838427, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}
-      propertyPath: Lives.Array.data[2]
-      value: 
-      objectReference: {fileID: 890640127}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5724556a782a24791a13bdcdb458f7, type: 3}

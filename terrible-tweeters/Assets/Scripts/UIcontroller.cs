@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine.Utility;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,7 +10,8 @@ public class UIcontroller : MonoBehaviour
 {
     // DO NOT FORGET TO KEEP THE EVENT SYSTEM GAME OBJECT IN THE CANVAS OR THE BUTTON WILL NOT WORK!
 
-    [SerializeField] private List<GameObject> Lives;
+    // [SerializeField] 
+    private List<GameObject> m_LifeIcons;
     
     private Button m_RestartButton;
 
@@ -35,10 +37,10 @@ public class UIcontroller : MonoBehaviour
     {
         // Debug.Log("starting ui controller");
         SetUpButtons();
+        ShowLivesLeft(3);
     }
 
-    
-    
+
     private void SetUpButtons()
     {
         // Debug.Log("setting up buttons");
@@ -53,4 +55,25 @@ public class UIcontroller : MonoBehaviour
         // Debug.Log($"restarting {scene.name}");
         SceneManager.LoadScene(scene.name);
     }
+
+    public void ShowLivesLeft(int numOfLives)
+    {
+        foreach (GameObject LifeIcon in LivesHolder.Instance.LifeIcons)
+        {
+            if (LifeIcon)
+            {
+                LifeIcon.SetActive(false);
+            }
+        }
+        
+        Debug.Log($"showing lives left: {numOfLives}");
+        for (int i = 0; i < numOfLives; i++)
+        {
+            if (LivesHolder.Instance.LifeIcons[i])
+            {
+                LivesHolder.Instance.LifeIcons[i].SetActive(true);
+            }
+        }
+    }
+
 }

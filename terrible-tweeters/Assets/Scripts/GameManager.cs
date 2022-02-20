@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     
-    [SerializeField] string m_nextLevelName;
+    // [SerializeField] string m_nextLevelName;
+    [SerializeField] int m_currentLevel;
     
     
     public Monster[] m_monsters;
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
     {
         if (MonstersAreAllDead())
         {
-            Debug.Log($"Go to level {m_nextLevelName}");
+            // Debug.Log($"Go to level {m_nextLevelName}");
             GoToNextLevel();
         }
     } // Update
@@ -66,7 +67,7 @@ public class GameManager : MonoBehaviour
     private void GoToNextLevel()
     {
         // DO NOT FORGET TO ADD SCENES FOR ALL OUR LEVELS TO FILE > BUILD SETTINGS
-        SceneManager.LoadScene(m_nextLevelName);
+        SceneManager.LoadScene($"Level{m_currentLevel+1}");
     } // GoToNextLevel
 
     public void UpdateLives(int numOfLives)

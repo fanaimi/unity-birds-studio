@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     
     // [SerializeField] string m_nextLevelName;
-    [SerializeField] int m_currentLevel;
+    [SerializeField] public int m_currentLevel;
     
     
     public Monster[] m_monsters;

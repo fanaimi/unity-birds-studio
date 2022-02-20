@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine.Utility;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,7 +19,7 @@ public class UIcontroller : MonoBehaviour
     private static UIcontroller _instance;
     public static UIcontroller Instance { get { return _instance; } }
 
-
+    [SerializeField] private TMP_Text m_currentLevelTxt;
     private void Awake()
     {
         // Debug.Log("awakening");
@@ -38,6 +39,12 @@ public class UIcontroller : MonoBehaviour
         // Debug.Log("starting ui controller");
         SetUpButtons();
         ShowLivesLeft(3);
+        ShowLevel();
+    }
+
+    private void ShowLevel()
+    {
+        m_currentLevelTxt.text = GameManager.Instance.m_currentLevel.ToString();
     }
 
 

@@ -94,49 +94,80 @@ public class Nuat : MonoBehaviour
 
         if (touch.phase == TouchPhase.Began)
         {
-            // Debug.Log("mouse down");
+            /*Debug.Log("touch down");
+            Ray ray = Camera.main.ScreenPointToRay(touch.position);
+            RaycastHit hit;
+
+            Debug.Log(ray);
+           Debug.DrawLine(ray.origin, ray.direction * 100, Color.yellow, 3f);
+
+            if (Physics.Raycast(ray, out hit, 100f))
+            {
+                if (hit.transform != null)
+                {
+                    Debug.Log("Hitting : " + hit.transform.name);
+                }
+
+                Debug.Log("Raycasting");
+                if (hit.collider.CompareTag("Player"))
+                {
+                    Debug.Log("touched player");
+                    m_spriteRend.color = Color.red;
+                    Debug.Log("touched player");
+                    m_IsDragging = true;
+                }
+            }*/
+            
             m_spriteRend.color = Color.red;
             m_IsDragging = true;
+            
         }
         else if (touch.phase == TouchPhase.Moved)
         {
-            Vector3 m_mousePos = Camera.main.ScreenToWorldPoint(touch.position);
-
-            Vector2 m_desiredPos = m_mousePos;
-     
-            // transform.position = new Vector3(m_mousePos.x, m_mousePos.y, transform.position.z);
-
-        
-            // this is to make sure the player is not dragged too much at the beginning
-            float m_distance = Vector2.Distance(m_desiredPos, m_startPos);
-            if (m_distance > m_maxDragDistance)
+            if (true) // m_IsDragging)
             {
-                Vector2 direction = m_desiredPos - m_startPos;
-                direction.Normalize();
+                Vector3 m_mousePos = Camera.main.ScreenToWorldPoint(touch.position);
 
-                // setting a point on the direction at a certain distance
-                m_desiredPos = m_startPos + (direction * m_maxDragDistance);
+                Vector2 m_desiredPos = m_mousePos;
+
+                // transform.position = new Vector3(m_mousePos.x, m_mousePos.y, transform.position.z);
+
+
+                // this is to make sure the player is not dragged too much at the beginning
+                float m_distance = Vector2.Distance(m_desiredPos, m_startPos);
+                if (m_distance > m_maxDragDistance)
+                {
+                    Vector2 direction = m_desiredPos - m_startPos;
+                    direction.Normalize();
+
+                    // setting a point on the direction at a certain distance
+                    m_desiredPos = m_startPos + (direction * m_maxDragDistance);
+                }
+
+                // this is to prevent the Nuat to be dragged to the right
+                if (m_desiredPos.x > m_startPos.x)
+                {
+                    m_desiredPos.x = m_startPos.x;
+                }
+
+                m_rb.position = m_desiredPos;
             }
-
-            // this is to prevent the Nuat to be dragged to the right
-            if (m_desiredPos.x > m_startPos.x)
-            {
-                m_desiredPos.x = m_startPos.x;
-            }
-
-            m_rb.position = m_desiredPos;
         }
         else if (touch.phase == TouchPhase.Ended)
         {
-            // Debug.Log("mouse up");
-            m_spriteRend.color = Color.white;
-            Vector2 m_currentPos = m_rb.position;
+            if (true) // m_IsDragging)
+            {
+                // Debug.Log("mouse up");
+                m_spriteRend.color = Color.white;
+                Vector2 m_currentPos = m_rb.position;
 
-            Vector2 m_direction = m_startPos - m_currentPos;
-            m_direction.Normalize();
-            m_rb.isKinematic = false;
-            m_rb.AddForce(m_direction * m_speed);
-            m_IsDragging = false;
+                Vector2 m_direction = m_startPos - m_currentPos;
+                m_direction.Normalize();
+                m_rb.isKinematic = false;
+                m_rb.AddForce(m_direction * m_speed);
+                m_IsDragging = false;
+                GameManager.Instance.DecreaseLives();
+            }
         }
 
     } // Update

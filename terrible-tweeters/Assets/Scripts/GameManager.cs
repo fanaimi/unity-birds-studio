@@ -10,12 +10,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] string m_nextLevelName;
     
     
-    private static GameManager _instance;
     public Monster[] m_monsters;
-    public static GameManager Instance { get { return _instance; } }
+    
     public int m_CurrentlLives;
-
-
+    
+    private static GameManager _instance;
+    public static GameManager Instance { get { return _instance; } }
     private void Awake()
     {
         // Debug.Log("awakening");

@@ -8,9 +8,28 @@ using UnityEngine.UI;
 public class UIcontroller : MonoBehaviour
 {
     // DO NOT FORGET TO KEEP THE EVENT SYSTEM GAME OBJECT IN THE CANVAS OR THE BUTTON WILL NOT WORK!
-    
+
+    [SerializeField] private List<GameObject> Lives;
     
     private Button m_RestartButton;
+
+    private static UIcontroller _instance;
+    public static UIcontroller Instance { get { return _instance; } }
+
+
+    private void Awake()
+    {
+        // Debug.Log("awakening");
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+        
+    }
     
     private void Start()
     {
@@ -18,11 +37,14 @@ public class UIcontroller : MonoBehaviour
         SetUpButtons();
     }
 
+    
+    
     private void SetUpButtons()
     {
         // Debug.Log("setting up buttons");
         m_RestartButton = UiButtons.Instance.restartButton;
         m_RestartButton.onClick.AddListener(RestartLevel);
+        // m_RestartButton.;
     }
 
     public void RestartLevel()

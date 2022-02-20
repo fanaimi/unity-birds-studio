@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 408845967}
   - component: {fileID: 408845966}
   m_Layer: 5
-  m_Name: life
+  m_Name: Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &408845965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -87,12 +87,12 @@ GameObject:
   - component: {fileID: 524532966}
   - component: {fileID: 524532965}
   m_Layer: 5
-  m_Name: life
+  m_Name: Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &524532964
 RectTransform:
   m_ObjectHideFlags: 0
@@ -430,12 +430,12 @@ GameObject:
   - component: {fileID: 1231569329}
   - component: {fileID: 1231569328}
   m_Layer: 5
-  m_Name: life
+  m_Name: Life
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1231569327
 RectTransform:
   m_ObjectHideFlags: 0
@@ -870,6 +870,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374f47d6e76e4294189d2e5999e2b44b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Lives:
+  - {fileID: 1231569326}
+  - {fileID: 524532963}
+  - {fileID: 408845964}
 --- !u!1 &4679125536170791517
 GameObject:
   m_ObjectHideFlags: 0

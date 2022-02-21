@@ -4937,7 +4937,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6376e65d5cd1502458f627e6f98265e4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0eaab205176ebc4478737cb9f20e367d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5023,5 +5023,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a419b7e2fa16914fa0e30c47e9d09b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_deadSprite: {fileID: 21300000, guid: 70a60dad9c6f2aa42941b53edf1428e9, type: 3}
+  m_deadSprite: {fileID: 21300000, guid: 1a2317f713e2c5a4e9abf4d7a032be4e, type: 3}
   m_monsterDeathParticleSystem: {fileID: 651242303060590020}

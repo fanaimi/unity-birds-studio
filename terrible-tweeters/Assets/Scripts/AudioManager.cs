@@ -9,18 +9,18 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] sounds;
 
-    public static AudioManager instance;
+    private static AudioManager _instance;
+    public static AudioManager Instance { get { return _instance; } }
     
     void Awake()
     {
-        if (instance == null)
+        if (_instance != null && _instance != this)
         {
-            instance = this;
+            Destroy(this.gameObject);
         }
         else
         {
-            Destroy(gameObject) ;
-            //return;
+            _instance = this;
         }
 
 

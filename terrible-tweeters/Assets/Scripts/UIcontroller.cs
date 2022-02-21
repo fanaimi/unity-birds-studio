@@ -58,6 +58,7 @@ public class UIcontroller : MonoBehaviour
 
     public void RestartLevel()
     {
+        AudioManager.Instance.PlayOnce("scream");
         Scene scene = SceneManager.GetActiveScene();
         // Debug.Log($"restarting {scene.name}");
         SceneManager.LoadScene(scene.name);

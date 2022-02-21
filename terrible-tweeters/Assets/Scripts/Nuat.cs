@@ -157,6 +157,7 @@ public class Nuat : MonoBehaviour
         {
             if (true) // m_IsDragging)
             {
+                AudioManager.Instance.PlayOnce("swoosh");
                 // Debug.Log("mouse up");
                 m_spriteRend.color = Color.white;
                 Vector2 m_currentPos = m_rb.position;

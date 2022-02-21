@@ -50,6 +50,7 @@ public class Monster : MonoBehaviour
     private IEnumerator Die()
     {
         m_hasDied = true;
+        AudioManager.Instance.PlayOnce("scream");
         GetComponent<SpriteRenderer>().sprite = m_deadSprite;
         m_monsterDeathParticleSystem.Play();
         yield return new WaitForSeconds(1);

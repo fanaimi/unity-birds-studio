@@ -92,7 +92,7 @@ public class Nuat : MonoBehaviour
             return;
         var touch = Input.GetTouch(0);
 
-        if (touch.phase == TouchPhase.Began)
+        if (GameManager.Instance.isAlive && touch.phase == TouchPhase.Began)
         {
             /*Debug.Log("touch down");
             Ray ray = Camera.main.ScreenPointToRay(touch.position);
@@ -122,7 +122,7 @@ public class Nuat : MonoBehaviour
             m_IsDragging = true;
             
         }
-        else if (touch.phase == TouchPhase.Moved)
+        else if (GameManager.Instance.isAlive && touch.phase == TouchPhase.Moved)
         {
             if (true) // m_IsDragging)
             {
@@ -153,7 +153,7 @@ public class Nuat : MonoBehaviour
                 m_rb.position = m_desiredPos;
             }
         }
-        else if (touch.phase == TouchPhase.Ended)
+        else if (GameManager.Instance.isAlive && touch.phase == TouchPhase.Ended)
         {
             if (true) // m_IsDragging)
             {
@@ -167,43 +167,13 @@ public class Nuat : MonoBehaviour
                 m_rb.isKinematic = false;
                 m_rb.AddForce(m_direction * m_speed);
                 m_IsDragging = false;
-                GameManager.Instance.DecreaseLives();
+                LevelManager.Instance.DecreaseLives();
             }
         }
 
     } // Update
 
-    
-    // GameManager.Instance.DecreaseLives();
-    
-    /*
-     void Update()
-    {
  
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
- 
-            Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
-            RaycastHit hit;
- 
-            Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow, 100f);
- 
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.transform.tag == "fruit")
-                {
-                    GameObject temp = hit.transform.gameObject;
-                    Destroy(temp);
-                }
-            }
-            else
-            {
-                Touch myTouch = Input.GetTouch(0);
-                MakeFruit(myTouch);
-            }
-        }
-    }
-     */
     
     
     

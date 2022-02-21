@@ -43,3 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36cbbe42a9aa644ca79fcbdd03f42b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_currentLevel: 1
+  m_monsters: []
+  m_CurrentlLives: 0

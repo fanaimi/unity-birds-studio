@@ -44,7 +44,7 @@ public class UIcontroller : MonoBehaviour
 
     private void ShowLevel()
     {
-        m_currentLevelTxt.text = GameManager.Instance.m_currentLevel.ToString();
+        m_currentLevelTxt.text = LevelManager.Instance.m_currentLevel.ToString();
     }
 
 

@@ -58,13 +58,13 @@ MonoBehaviour:
     loop: 1
   - clip: {fileID: 8300000, guid: cb1791743d7ce0946841e84be4350a59, type: 3}
     name: swoosh
-    volume: 0
-    pitch: 0
+    volume: 0.384
+    pitch: 1.21
     source: {fileID: 0}
     loop: 0
   - clip: {fileID: 8300000, guid: ea9cccdeddca4f84dba3ffec586449b1, type: 3}
     name: scream
-    volume: 0
-    pitch: 0
+    volume: 0.405
+    pitch: 1.27
     source: {fileID: 0}
     loop: 0

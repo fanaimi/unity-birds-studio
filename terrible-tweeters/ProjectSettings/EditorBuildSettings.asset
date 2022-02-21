@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TerribleTweeters.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/0MainMenu.unity
+    guid: f83a42deb148f3c459af808a825d6f62
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 81c39bfa2f7d4e24d9064a2af3102067
   - enabled: 1

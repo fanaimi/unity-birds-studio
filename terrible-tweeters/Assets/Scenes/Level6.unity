@@ -1556,7 +1556,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7178375507722918588, guid: 02c9383e169374d4ebce79b3a4cab12e, type: 3}
       propertyPath: m_Name
-      value: GameManager
+      value: LevelManager
       objectReference: {fileID: 0}
     - target: {fileID: 8590413276538399512, guid: 02c9383e169374d4ebce79b3a4cab12e, type: 3}
       propertyPath: m_RootOrder

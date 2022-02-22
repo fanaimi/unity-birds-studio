@@ -275,6 +275,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1968657121547622897, guid: 434b38cc659106e47a200e7526ecaed9, type: 3}
+      propertyPath: sounds.Array.data[5].pitch
+      value: 2.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968657121547622897, guid: 434b38cc659106e47a200e7526ecaed9, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.76
+      objectReference: {fileID: 0}
     - target: {fileID: 1968657121547622910, guid: 434b38cc659106e47a200e7526ecaed9, type: 3}
       propertyPath: m_RootOrder
       value: 1

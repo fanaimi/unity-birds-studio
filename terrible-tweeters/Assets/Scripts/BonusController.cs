@@ -12,7 +12,8 @@ public class BonusController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("SelfDestroy", 4f);       
+        AudioManager.Instance.Play("bling");
+        Invoke("SelfDestroy", 4f);
     }
 
 
@@ -26,6 +27,7 @@ public class BonusController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.Instance.Play("heart");
             LevelManager.Instance.UpdateLives(3);
             GameObject heart = Instantiate(m_heartPrefab, transform.position, transform.rotation);
             Destroy(heart, 1f);

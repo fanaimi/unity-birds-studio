@@ -68,3 +68,15 @@ MonoBehaviour:
     pitch: 1.27
     source: {fileID: 0}
     loop: 0
+  - clip: {fileID: 8300000, guid: 4ef5597df77243542bafe7ce71751a84, type: 3}
+    name: bling
+    volume: 0.405
+    pitch: 1.27
+    source: {fileID: 0}
+    loop: 0
+  - clip: {fileID: 8300000, guid: 1808a1282ea5aa343bd44e314e840583, type: 3}
+    name: heart
+    volume: 0.405
+    pitch: 1.27
+    source: {fileID: 0}
+    loop: 0

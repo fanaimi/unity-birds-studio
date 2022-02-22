@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     
     // [SerializeField] string m_nextLevelName;
     [SerializeField] public int m_currentLevel;
+    [SerializeField] public GameObject m_AjPrefab;
     
     
     public Monster[] m_monsters;
@@ -35,9 +36,16 @@ public class LevelManager : MonoBehaviour
 
     private void OnEnable()
     {
+        GameManager.Instance.isAlive = true;
+    }
+
+
+    private void Start()
+    {
         // Debug.Log("enabled");
         m_monsters = FindObjectsOfType<Monster>();
         UpdateLives(3);
+        GameManager.Instance.isAlive = true;
     }
 
     // Update is called once per frame
@@ -86,7 +94,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             GameManager.Instance.isAlive = false;
-            GameOverController.Instance.ShowGameOver();
+            GameManager.Instance.ShowGameOver();
         }
 
     }

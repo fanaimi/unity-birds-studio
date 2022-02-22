@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         AudioManager.Instance.Play("game");
-        GameOverController.Instance.HideGameOver();
+        HideGameOver();
         isAlive = true;
     }
 
@@ -41,9 +41,28 @@ public class GameManager : MonoBehaviour
     
     
     
+    public void ShowGameOver()
+    {
+        Debug.Log("showing game over");
+        isAlive = false;
+        GameOverController.Instance.gameObject.SetActive(true);
+    } // showGameOver
+    
+    
+    public void HideGameOver()
+    {
+        Debug.Log("hiding game over");
+        LevelManager.Instance.UpdateLives(3);
+        // isAlive = true;
+        GameOverController.Instance.gameObject.SetActive(false);
+        // reloading current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    } // sHideGameOver
+    
+    
     public void Restart()
     {
-        GameOverController.Instance.HideGameOver();
+        HideGameOver();
         isAlive = true;
         SceneManager.LoadScene("Level1");   
     }

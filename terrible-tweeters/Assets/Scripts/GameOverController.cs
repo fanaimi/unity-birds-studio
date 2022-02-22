@@ -27,20 +27,14 @@ public class GameOverController : MonoBehaviour
 
     private void Start()
     {
-        
+        // HideGameOver();
     }
 
-
-    public void ShowGameOver()
+    public void OnRestartPressed()
     {
-        this.gameObject.SetActive(true);
-    } // showGameOver
-    
-    
-    public void HideGameOver()
-    {
-        this.gameObject.SetActive(false);
-    } // sHideGameOver
+        Debug.Log("restart button pressed");
+        GameManager.Instance.HideGameOver();
+    }
 
 
 }

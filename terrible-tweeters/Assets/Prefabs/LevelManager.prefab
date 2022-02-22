@@ -45,5 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_currentLevel: 1
   m_AjPrefab: {fileID: 6258262633019034369, guid: 4240b64a2896a2f4cac7bea35960a7b0, type: 3}
+  m_heartPrefab: {fileID: 8942274111973831148, guid: 1184048d6cf8e0646975afc3fd924600, type: 3}
   m_monsters: []
   m_CurrentlLives: 0

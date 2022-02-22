@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public int m_currentLevel;
     [SerializeField] public GameObject m_AjPrefab;
     
+    [SerializeField] private GameObject m_heartPrefab;
+
+    private GameObject m_bonus;
     
     public Monster[] m_monsters;
     
@@ -46,7 +50,23 @@ public class LevelManager : MonoBehaviour
         m_monsters = FindObjectsOfType<Monster>();
         UpdateLives(3);
         GameManager.Instance.isAlive = true;
+        float delay = Random.Range(.5f, 5f);
+        Invoke("SpawnBonus", delay);
     }
+
+
+    private void SpawnBonus()
+    {
+        Vector2 randomPos = new Vector2(
+            Random.Range(-10f, 10f),
+            Random.Range(-2f, 5f)
+        );
+        m_bonus = Instantiate(m_AjPrefab,
+            randomPos,
+            Quaternion.identity
+        );
+    }
+
 
     // Update is called once per frame
     void Update()

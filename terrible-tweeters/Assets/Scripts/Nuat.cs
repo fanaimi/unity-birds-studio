@@ -11,6 +11,7 @@ public class Nuat : MonoBehaviour
 
     [SerializeField] private float m_speed = 1000f;
     [SerializeField] private float m_maxDragDistance = 3.5f;
+
     private float m_NuatRespawnDelay = 1.3f;
     
     // public property than can only be modified internally
@@ -173,15 +174,18 @@ public class Nuat : MonoBehaviour
 
     } // Update
 
- 
-    
-    
-    
-    
-    
+
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
+        /*Debug.Log("ASDASD");
+        if (collision.collider.CompareTag("Bonus"))
+        {
+            LevelManager.Instance.UpdateLives(3);
+            Destroy(collision.collider.gameObject);
+        } else */
         StartCoroutine(ResetNuat());
     } // OnCollisionEnter2D
 

@@ -51,20 +51,13 @@ public class GameManager : MonoBehaviour
     
     public void HideGameOver()
     {
-        Debug.Log("hiding game over");
-        LevelManager.Instance.UpdateLives(3);
-        // isAlive = true;
+        // Debug.Log("hiding game over");
+
         GameOverController.Instance.gameObject.SetActive(false);
         // reloading current scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Level1");
     } // sHideGameOver
     
     
-    public void Restart()
-    {
-        HideGameOver();
-        isAlive = true;
-        SceneManager.LoadScene("Level1");   
-    }
     
 }

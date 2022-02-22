@@ -32,7 +32,7 @@ public class GameOverController : MonoBehaviour
 
     public void OnRestartPressed()
     {
-        Debug.Log("restart button pressed");
+        Debug.Log("OnRestartPressed - restart button pressed");
         GameManager.Instance.HideGameOver();
     }
 

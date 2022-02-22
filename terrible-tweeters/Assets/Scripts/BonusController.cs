@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class BonusController : MonoBehaviour
 {
+    
+    
+    [SerializeField] private GameObject m_heartPrefab;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +24,11 @@ public class BonusController : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("qwe");
         if (other.CompareTag("Player"))
         {
             LevelManager.Instance.UpdateLives(3);
+            GameObject heart = Instantiate(m_heartPrefab, transform.position, transform.rotation);
+            Destroy(heart, 1f);
             Destroy(gameObject);
         }
     }

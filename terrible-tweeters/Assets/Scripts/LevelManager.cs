@@ -12,7 +12,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public int m_currentLevel;
     [SerializeField] public GameObject m_AjPrefab;
     
-    [SerializeField] private GameObject m_heartPrefab;
 
     private GameObject m_bonus;
     
@@ -50,7 +49,7 @@ public class LevelManager : MonoBehaviour
         m_monsters = FindObjectsOfType<Monster>();
         UpdateLives(3);
         GameManager.Instance.isAlive = true;
-        float delay = Random.Range(.5f, 5f);
+        float delay = Random.Range(3f, 7f);
         Invoke("SpawnBonus", delay);
     }
 

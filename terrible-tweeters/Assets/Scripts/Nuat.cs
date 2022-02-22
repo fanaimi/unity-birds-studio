@@ -11,7 +11,7 @@ public class Nuat : MonoBehaviour
 
     [SerializeField] private float m_speed = 1000f;
     [SerializeField] private float m_maxDragDistance = 3.5f;
-    private float m_NuatRespawnDelay = 2f;
+    private float m_NuatRespawnDelay = 1.3f;
     
     // public property than can only be modified internally
     public bool m_IsDragging { get; private set; }

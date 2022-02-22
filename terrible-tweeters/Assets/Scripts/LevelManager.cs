@@ -93,6 +93,10 @@ public class LevelManager : MonoBehaviour
     
     private void GoToNextLevel()
     {
+        /*
+         * if on level 9, get back to level 1 
+         */
+        
         // DO NOT FORGET TO ADD SCENES FOR ALL OUR LEVELS TO FILE > BUILD SETTINGS
         SceneManager.LoadScene($"Level{m_currentLevel+1}");
     } // GoToNextLevel

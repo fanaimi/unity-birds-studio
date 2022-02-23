@@ -41,6 +41,7 @@ public class UIcontroller : MonoBehaviour
         SetUpButtons();
         ShowLivesLeft(3);
         ShowLevel();
+        ShowScore(GameManager.Instance.m_score);
     }
 
     private void ShowLevel()

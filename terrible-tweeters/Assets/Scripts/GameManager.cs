@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    private float m_score;
+    public float m_score = 0;
     
     public bool isAlive;
     private static GameManager _instance;
@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_score = 0;
-        UIcontroller.Instance.ShowScore(m_score);
+        // m_score = 0;
+        // UIcontroller.Instance.ShowScore(m_score);
         AudioManager.Instance.Play("game");
         HideGameOver();
         isAlive = true;
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     public void HideGameOver()
     {
         // Debug.Log("hiding game over");
-
+        m_score = 0;
         GameOverController.Instance.gameObject.SetActive(false);
         // reloading current scene
         SceneManager.LoadScene("Level1");

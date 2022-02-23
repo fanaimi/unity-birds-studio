@@ -21,6 +21,7 @@ public class UIcontroller : MonoBehaviour
 
     [SerializeField] private TMP_Text m_currentLevelTxt;
     [SerializeField] private TMP_Text m_currentScoreTxt;
+    [SerializeField] private TMP_Text m_timeLeftTxt;
     private void Awake()
     {
         // Debug.Log("awakening");

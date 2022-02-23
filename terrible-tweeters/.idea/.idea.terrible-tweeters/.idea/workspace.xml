@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3a51ace-f61c-450c-bae6-e8510b377106" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.terrible-tweeters/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nuat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nuat.cs" afterDir="false" />
@@ -73,7 +74,7 @@
       <workItem from="1645433953018" duration="7783000" />
       <workItem from="1645472645224" duration="3769000" />
       <workItem from="1645520613624" duration="13785000" />
-      <workItem from="1645606580887" duration="6743000" />
+      <workItem from="1645606580887" duration="7447000" />
     </task>
     <servers />
   </component>

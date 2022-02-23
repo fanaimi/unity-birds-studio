@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+    private float m_score;
+    
     public bool isAlive;
     private static GameManager _instance;
     public static GameManager Instance { get { return _instance; } }
@@ -38,9 +41,14 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    
-    
-    
+
+    public void AddScore(float scoreToAdd)
+    {
+        m_score += scoreToAdd;
+        UIcontroller.Instance.ShowScore(m_score);
+    }
+
+
     public void ShowGameOver()
     {
         Debug.Log("showing game over");

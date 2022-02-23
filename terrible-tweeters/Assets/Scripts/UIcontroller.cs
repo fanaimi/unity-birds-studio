@@ -84,4 +84,10 @@ public class UIcontroller : MonoBehaviour
         }
     }
 
+
+    public void ShowScore(float scoreToDisplay)
+    {
+        
+    }
+
 }

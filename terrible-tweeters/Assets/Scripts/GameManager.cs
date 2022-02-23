@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m_score = 0;
+        UIcontroller.Instance.ShowScore(m_score);
         AudioManager.Instance.Play("game");
         HideGameOver();
         isAlive = true;

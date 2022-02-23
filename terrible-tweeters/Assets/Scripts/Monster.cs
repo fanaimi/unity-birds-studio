@@ -10,6 +10,10 @@ public class Monster : MonoBehaviour
     [SerializeField] private Sprite m_deadSprite;
     [SerializeField] private ParticleSystem m_monsterDeathParticleSystem;
 
+    private float m_killScore = 10f;
+    private float m_hitScore = 5f;
+    
+    
     private bool m_hasDied;
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,6 +35,7 @@ public class Monster : MonoBehaviour
         Nuat nuat = collision.gameObject.GetComponent<Nuat>();
         if (nuat != null)
         {
+            GameManager.Instance.AddScore(m_killScore);
             return true;
         }
        
@@ -39,6 +44,7 @@ public class Monster : MonoBehaviour
         // normal.y => 0 means horizontal (from right), -1 vertical (from above)
         if (collision.contacts[0].normal.y < -0.5)
         {
+            GameManager.Instance.AddScore(m_hitScore);
             return true;
         }
 

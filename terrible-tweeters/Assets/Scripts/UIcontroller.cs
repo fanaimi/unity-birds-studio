@@ -20,6 +20,7 @@ public class UIcontroller : MonoBehaviour
     public static UIcontroller Instance { get { return _instance; } }
 
     [SerializeField] private TMP_Text m_currentLevelTxt;
+    [SerializeField] private TMP_Text m_currentScoreTxt;
     private void Awake()
     {
         // Debug.Log("awakening");
@@ -87,7 +88,7 @@ public class UIcontroller : MonoBehaviour
 
     public void ShowScore(float scoreToDisplay)
     {
-        
+        m_currentScoreTxt.text = scoreToDisplay.ToString();
     }
 
 }

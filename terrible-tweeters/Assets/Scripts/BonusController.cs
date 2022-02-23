@@ -7,7 +7,7 @@ public class BonusController : MonoBehaviour
     
     
     [SerializeField] private GameObject m_heartPrefab;
-    
+    private float m_bonusScore = 50f;
     
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,7 @@ public class BonusController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GameManager.Instance.AddScore(m_bonusScore);
             AudioManager.Instance.Play("heart");
             LevelManager.Instance.UpdateLives(3);
             GameObject heart = Instantiate(m_heartPrefab, transform.position, transform.rotation);

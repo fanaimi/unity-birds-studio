@@ -175,18 +175,24 @@ public class Nuat : MonoBehaviour
     } // Update
 
 
+    private bool CanPlay()
+    {
+        if (GameManager.Instance.isAlive && LevelManager.Instance.m_CurrentlLives > -1)
+        {
+            return true;
+        }
+        else
+        {
+            UIcontroller.Instance.ShowLivesLeft(0);
+            return false;
+        }
+    }
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        /*Debug.Log("ASDASD");
-        if (collision.collider.CompareTag("Bonus"))
-        {
-            LevelManager.Instance.UpdateLives(3);
-            Destroy(collision.collider.gameObject);
-        } else */
-        StartCoroutine(ResetNuat());
+            StartCoroutine(ResetNuat());
+       
     } // OnCollisionEnter2D
 
 
@@ -194,9 +200,17 @@ public class Nuat : MonoBehaviour
     private IEnumerator ResetNuat()
     {
         yield return new WaitForSeconds(m_NuatRespawnDelay);
-        m_rb.isKinematic = true;
-        m_rb.velocity = Vector2.zero;
-        m_rb.position = m_startPos  ; // vector2
+
+        if (CanPlay())
+        {
+            m_rb.isKinematic = true;
+            m_rb.velocity = Vector2.zero;
+            m_rb.position = m_startPos; // vector2
+        }
+        else
+        {
+            GameManager.Instance.ShowGameOver();
+        }
     }
 
 

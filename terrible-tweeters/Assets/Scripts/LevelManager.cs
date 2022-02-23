@@ -120,7 +120,7 @@ public class LevelManager : MonoBehaviour
     
     public void DecreaseLives()
     {
-        if (m_CurrentlLives >= 1)
+        if (m_CurrentlLives > 1)
         {
             m_CurrentlLives -=1;
             UIcontroller.Instance.ShowLivesLeft(m_CurrentlLives);
@@ -128,7 +128,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             GameManager.Instance.isAlive = false;
-            GameManager.Instance.ShowGameOver();
+            //GameManager.Instance.ShowGameOver();
         }
 
     }

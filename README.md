@@ -100,3 +100,9 @@
     public bool m_IsDragging { get; private set; }
 
  ```   
+ 
+ 
+ 
+ # TODO:
+ * add timer and countdown
+ * add more score for each life left

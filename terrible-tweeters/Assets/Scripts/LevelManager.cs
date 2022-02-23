@@ -20,6 +20,7 @@ public class LevelManager : MonoBehaviour
     public int m_CurrentlLives;
     
     private static LevelManager _instance;
+    private string m_lastLevelName = "Level9";
     public static LevelManager Instance { get { return _instance; } }
     private void Awake()
     {
@@ -96,9 +97,19 @@ public class LevelManager : MonoBehaviour
         /*
          * if on level 9, get back to level 1 
          */
-        
-        // DO NOT FORGET TO ADD SCENES FOR ALL OUR LEVELS TO FILE > BUILD SETTINGS
-        SceneManager.LoadScene($"Level{m_currentLevel+1}");
+        if (SceneManager.GetActiveScene().name == m_lastLevelName)
+        {
+            // loading level 1
+            SceneManager.LoadScene("Level1");
+        }
+        else
+        {
+            // DO NOT FORGET TO ADD SCENES FOR ALL OUR LEVELS TO FILE > BUILD SETTINGS
+            // loading next level
+            SceneManager.LoadScene($"Level{m_currentLevel+1}");
+        }
+
+
     } // GoToNextLevel
 
     public void UpdateLives(int numOfLives)

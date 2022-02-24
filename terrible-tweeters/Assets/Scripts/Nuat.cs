@@ -18,7 +18,7 @@ public class Nuat : MonoBehaviour
     public bool m_IsDragging { get; private set; }
     
     
-
+    public bool hasCompletedThrow = true;
 
     private void Awake()
     {
@@ -95,6 +95,7 @@ public class Nuat : MonoBehaviour
 
         if (GameManager.Instance.isAlive && touch.phase == TouchPhase.Began)
         {
+            hasCompletedThrow = false;
             m_spriteRend.color = Color.red;
             m_IsDragging = true;
             
@@ -141,33 +142,45 @@ public class Nuat : MonoBehaviour
                 m_rb.isKinematic = false;
                 m_rb.AddForce(m_direction * m_speed);
                 m_IsDragging = false;
-                LevelManager.Instance.DecreaseLives();
+                // LevelManager.Instance.DecreaseLives(); // game over as soon as last throw starts
+            
             }
         }
 
     } // Update
 
-
-   
-
+    private bool m_lifeRemoved = false;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
             StartCoroutine(ResetNuat());
-       
+            if (!m_lifeRemoved)
+            {
+                Invoke("RemoveOneLife", 1.8f);
+                m_lifeRemoved = true;
+            }
     } // OnCollisionEnter2D
 
+
+    private void RemoveOneLife()
+    {
+        LevelManager.Instance.DecreaseLives();
+    }
 
 
     private IEnumerator ResetNuat()
     {
         yield return new WaitForSeconds(m_NuatRespawnDelay);
-
+        hasCompletedThrow = true;
+        Debug.Log("resetting Nuat");
+        // LevelManager.Instance.DecreaseLives(); // invoked too many times
         if (GameManager.Instance.CanPlay())
         {
+            m_lifeRemoved = false;
             m_rb.isKinematic = true;
             m_rb.velocity = Vector2.zero;
             m_rb.position = m_startPos; // vector2
+            // hasCompletedThrow = false;
         }
         else
         {

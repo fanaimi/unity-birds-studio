@@ -77,7 +77,7 @@ public class UIcontroller : MonoBehaviour
             }
         }
         
-        Debug.Log($"showing lives left: {numOfLives}");
+        // Debug.Log($"showing lives left: {numOfLives}");
         for (int i = 0; i < numOfLives; i++)
         {
             if (LivesHolder.Instance.LifeIcons[i])

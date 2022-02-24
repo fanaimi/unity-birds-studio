@@ -22,6 +22,8 @@ public class LevelManager : MonoBehaviour
     private static LevelManager _instance;
     private string m_lastLevelName = "Level9";
     public static LevelManager Instance { get { return _instance; } }
+
+    private Nuat m_nuat;
     private void Awake()
     {
         // Debug.Log("awakening");
@@ -46,6 +48,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        m_nuat = FindObjectOfType<Nuat>().GetComponent<Nuat>();
         // Debug.Log("enabled");
         m_monsters = FindObjectsOfType<Monster>();
         UpdateLives(3);
@@ -70,16 +73,27 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public bool throwCompleted;
 
     // Update is called once per frame
     void Update()
     {
-        if (MonstersAreAllDead() && GameManager.Instance.CanPlay())
+        
+        if (m_nuat.hasCompletedThrow)
         {
-            float endOfLevelScore = (m_CurrentlLives * 10) + (TimerController.Instance.m_timeLeft);
-            GameManager.Instance.AddScore(endOfLevelScore);
-            // Debug.Log($"Go to level {m_nextLevelName}");
-            GoToNextLevel();
+            throwCompleted = true;
+            // Debug.Log("throw done");
+            if (MonstersAreAllDead() && GameManager.Instance.CanPlay())
+            {
+                float endOfLevelScore = (m_CurrentlLives * 10) + (TimerController.Instance.m_timeLeft);
+                GameManager.Instance.AddScore(endOfLevelScore);
+                // Debug.Log($"Go to level {m_nextLevelName}");
+                GoToNextLevel();
+            }
+        }
+        else
+        {
+            throwCompleted = false;
         }
     } // Update
     
@@ -125,6 +139,7 @@ public class LevelManager : MonoBehaviour
     
     public void DecreaseLives()
     {
+        Debug.Log("decreasing lives");
         if (m_CurrentlLives > 1)
         {
             m_CurrentlLives -=1;

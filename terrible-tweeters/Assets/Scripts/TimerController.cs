@@ -33,9 +33,9 @@ public class TimerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_timerActive)
+        if (m_timerActive )
         {
-            if (m_timeLeft > 0)
+            if (m_timeLeft > 0 && GameManager.Instance.CanPlay())
             {
                 m_timeLeft -= Time.deltaTime;
                 UIcontroller.Instance.ShowTimeLeft(m_timeLeft);

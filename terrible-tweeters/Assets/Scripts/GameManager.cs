@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowGameOver()
     {
-        Debug.Log("showing game over");
+        // Debug.Log("showing game over");
         isAlive = false;
         GameOverController.Instance.gameObject.SetActive(true);
     } // showGameOver
@@ -68,6 +68,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Level1");
     } // sHideGameOver
     
-    
+    public bool CanPlay()
+    {
+        if (isAlive && LevelManager.Instance.m_CurrentlLives > -1 && TimerController.Instance.m_timeLeft > 0)
+        {
+            return true;
+        }
+        else
+        {
+            UIcontroller.Instance.ShowLivesLeft(0);
+            return false;
+        }
+    }
     
 }

@@ -175,18 +175,7 @@ public class Nuat : MonoBehaviour
     } // Update
 
 
-    private bool CanPlay()
-    {
-        if (GameManager.Instance.isAlive && LevelManager.Instance.m_CurrentlLives > -1)
-        {
-            return true;
-        }
-        else
-        {
-            UIcontroller.Instance.ShowLivesLeft(0);
-            return false;
-        }
-    }
+   
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -201,7 +190,7 @@ public class Nuat : MonoBehaviour
     {
         yield return new WaitForSeconds(m_NuatRespawnDelay);
 
-        if (CanPlay())
+        if (GameManager.Instance.CanPlay())
         {
             m_rb.isKinematic = true;
             m_rb.velocity = Vector2.zero;

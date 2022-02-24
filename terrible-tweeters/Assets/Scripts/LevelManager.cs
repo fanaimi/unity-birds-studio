@@ -57,21 +57,24 @@ public class LevelManager : MonoBehaviour
 
     private void SpawnBonus()
     {
-        Vector2 randomPos = new Vector2(
-            Random.Range(-10f, 10f),
-            Random.Range(-2f, 5f)
-        );
-        m_bonus = Instantiate(m_AjPrefab,
-            randomPos,
-            Quaternion.identity
-        );
+        if (GameManager.Instance.CanPlay())
+        {
+            Vector2 randomPos = new Vector2(
+                Random.Range(-10f, 10f),
+                Random.Range(-2f, 5f)
+            );
+            m_bonus = Instantiate(m_AjPrefab,
+                randomPos,
+                Quaternion.identity
+            );
+        }
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (MonstersAreAllDead())
+        if (MonstersAreAllDead() && GameManager.Instance.CanPlay())
         {
             // Debug.Log($"Go to level {m_nextLevelName}");
             GoToNextLevel();

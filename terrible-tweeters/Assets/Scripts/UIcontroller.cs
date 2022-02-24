@@ -93,4 +93,12 @@ public class UIcontroller : MonoBehaviour
         m_currentScoreTxt.text = scoreToDisplay.ToString();
     }
 
+
+    public void ShowTimeLeft(float timeLeft)
+    {
+        int time = Mathf.RoundToInt(timeLeft);
+        m_timeLeftTxt.text = time.ToString();
+    }
+
+
 }

@@ -76,7 +76,7 @@ public class LevelManager : MonoBehaviour
     {
         if (MonstersAreAllDead() && GameManager.Instance.CanPlay())
         {
-            float endOfLevelScore = (m_CurrentlLives * 10) + (TimerController.Instance.m_timeLeft * 5);
+            float endOfLevelScore = (m_CurrentlLives * 10) + (TimerController.Instance.m_timeLeft);
             GameManager.Instance.AddScore(endOfLevelScore);
             // Debug.Log($"Go to level {m_nextLevelName}");
             GoToNextLevel();

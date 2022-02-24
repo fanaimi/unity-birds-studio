@@ -95,30 +95,6 @@ public class Nuat : MonoBehaviour
 
         if (GameManager.Instance.isAlive && touch.phase == TouchPhase.Began)
         {
-            /*Debug.Log("touch down");
-            Ray ray = Camera.main.ScreenPointToRay(touch.position);
-            RaycastHit hit;
-
-            Debug.Log(ray);
-           Debug.DrawLine(ray.origin, ray.direction * 100, Color.yellow, 3f);
-
-            if (Physics.Raycast(ray, out hit, 100f))
-            {
-                if (hit.transform != null)
-                {
-                    Debug.Log("Hitting : " + hit.transform.name);
-                }
-
-                Debug.Log("Raycasting");
-                if (hit.collider.CompareTag("Player"))
-                {
-                    Debug.Log("touched player");
-                    m_spriteRend.color = Color.red;
-                    Debug.Log("touched player");
-                    m_IsDragging = true;
-                }
-            }*/
-            
             m_spriteRend.color = Color.red;
             m_IsDragging = true;
             
@@ -130,10 +106,7 @@ public class Nuat : MonoBehaviour
                 Vector3 m_mousePos = Camera.main.ScreenToWorldPoint(touch.position);
 
                 Vector2 m_desiredPos = m_mousePos;
-
-                // transform.position = new Vector3(m_mousePos.x, m_mousePos.y, transform.position.z);
-
-
+                
                 // this is to make sure the player is not dragged too much at the beginning
                 float m_distance = Vector2.Distance(m_desiredPos, m_startPos);
                 if (m_distance > m_maxDragDistance)

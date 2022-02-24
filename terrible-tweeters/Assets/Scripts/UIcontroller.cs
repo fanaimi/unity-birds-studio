@@ -90,7 +90,8 @@ public class UIcontroller : MonoBehaviour
 
     public void ShowScore(float scoreToDisplay)
     {
-        m_currentScoreTxt.text = scoreToDisplay.ToString();
+        int scoreInt = Mathf.RoundToInt(scoreToDisplay);
+        m_currentScoreTxt.text = scoreInt.ToString();
     }
 
 
